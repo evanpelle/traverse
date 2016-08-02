@@ -1,0 +1,188 @@
+
+ <!-- <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="shortcut icon" href="favicon.ico">  
+    <div class="purchase">-->
+<div class="container" id="main-section">
+  <div id="landing-page" class="row">
+    <div class = "col-sm-12">
+
+    </div>
+  </div>
+
+  <div id="landing" class ="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <h1 style="font-weight:200; font-size:3em;">Can Traverse help you with hiring?</h1>
+      <br />
+      <h3 style="font-weight:300; font-size:2em;">Take a 3 minute survey to find out</h3>
+      <br />
+    </div>
+  </div>
+
+  <div id="contact-form" class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <%= form_for(@contact, :html => {:class => "form-horizontal new_survey_contact"}) do |f| %>
+      <h3>Please enter contact information</h3>
+      <br />
+      <br />
+      <div class="col-sm-4">
+        <%= f.text_field :name, :placeholder =>"Name"%>
+      </div>
+      <div class="col-sm-4" >
+        <%= f.text_field :email, :placeholder =>"Email" %>
+      </div>
+      <div class="col-sm-4">
+        <%= f.text_field :company, :placeholder =>"Company" %>
+      </div>
+      <br />
+    </div>
+  </div>
+
+
+
+    <%= fields_for(@contact.soft_sell_survey) do |s| %>
+    <div class="row>">
+        <div id="main-questions" class="col-sm-8 col-sm-offset-2">
+          <h3><%=$questions[:mq]%></h3>
+          <br />
+              <div class = "col-sm-8 col-sm-offset-2 checkbox-inline">
+                <%=checkboxWithLabel(s, :ma)%>
+                <%=checkboxWithLabel(s, :mb)%>
+                <%=checkboxWithLabel(s, :mc)%>
+                <%=checkboxWithLabel(s, :md)%>
+                <%=checkboxWithLabel(s, :other)%>
+              </div>
+        </div>
+    </div>
+    <div class="row">
+      <div id="a-questions" class="col-sm-8 col-sm-offset-2">
+        <h3><%=$questions[:aq]%></h3>
+        <br />
+          <div class = "col-sm-8 col-sm-offset-2 checkbox-inline">
+            <%=checkboxWithLabel(s, :a0)%>
+            <%=checkboxWithLabel(s, :a1)%>
+            <%=checkboxWithLabel(s, :a2)%>
+            <%=checkboxWithLabel(s, :a3)%>
+            <%=checkboxWithLabel(s, :a4)%>
+            <%=checkboxWithLabel(s, :a5)%>
+            <%=checkboxWithLabel(s, :a6)%>
+            <%=checkboxWithLabel(s, :a7)%>
+        </div>
+      </div>
+    </div>
+
+      <div  class = "row" id="bA-questions">
+        <div class="col-sm-10 col-sm-offset-1">
+          <h3><%=$questions[:bAq]%></h3>
+          <br />
+            <div class = "col-sm-8 col-sm-offset-2 checkbox-inline">
+              <%=checkboxWithLabel(s, :bA0)%>
+              <%=checkboxWithLabel(s, :bA1)%>
+              <%=checkboxWithLabel(s, :bA2)%>
+              <%=checkboxWithLabel(s, :bA3)%>
+              <%=checkboxWithLabel(s, :bA4)%>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row" id ="bB-questions">
+        <div class="col-sm-8 col-sm-offset-2">
+          <h3><%=$questions[:bBq]%></h3>
+          <br />
+             <div class = "col-sm-8 col-sm-offset-2 checkbox-inline">
+              <%=checkboxWithLabel(s, :bB0)%>
+              <%=checkboxWithLabel(s, :bB1)%>
+              <%=checkboxWithLabel(s, :bB2)%>
+              <%=checkboxWithLabel(s, :bB3)%>
+              <%=checkboxWithLabel(s, :bB4)%>
+              <%=checkboxWithLabel(s, :bB5)%>
+              <%=checkboxWithLabel(s, :bB6)%>
+              <%=checkboxWithLabel(s, :bB7)%>
+          </div>
+        </div>
+      </div>
+
+    <div class="row" id ="cA-questions">
+      <div class="col-sm-8 col-sm-offset-2">
+        <h3><%=$questions[:cAq]%></h3>
+        <br />
+        <div class="col-sm-8 col-sm-offset-2 checkbox-inline">
+          <%=checkboxWithLabel(s, :cA0)%>
+          <div id="cA0-questions" class="col-sm-10 col-sm-offset-1">
+            <%=checkboxWithLabel(s, :cA0a)%>
+            <%=checkboxWithLabel(s, :cA0b)%>
+            <%=checkboxWithLabel(s, :cA0c)%>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-8 col-sm-offset-2">
+        <div class="col-sm-8 col-sm-offset-2 checkbox-inline">
+          <%=checkboxWithLabel(s, :cA1)%>
+          <%=checkboxWithLabel(s, :cA2)%>
+          <%=checkboxWithLabel(s, :cA3)%>
+          <%=checkboxWithLabel(s, :cA4)%>
+          <%=checkboxWithLabel(s, :cA5)%>
+          <%=checkboxWithLabel(s, :cA6)%>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" id="cB-questions">
+      <div class="col-sm-8 col-sm-offset-2">
+        <h3><%=$questions[:cBq]%></h3>
+        <br />
+        <div class="col-sm-8 col-sm-offset-2 checkbox-inline">
+          <%=checkboxWithLabel(s, :cB0)%>
+          <%=checkboxWithLabel(s, :cB1)%>
+          <%=checkboxWithLabel(s, :cB2)%>
+          <%=checkboxWithLabel(s, :cB3)%>
+          <%=checkboxWithLabel(s, :cB4)%>
+          <%=checkboxWithLabel(s, :cB5)%>
+          <%=checkboxWithLabel(s, :cB6)%>
+          <%=checkboxWithLabel(s, :cB7)%>
+          <%=checkboxWithLabel(s, :cB8)%>
+          <%=checkboxWithLabel(s, :cB9)%>
+          <%=checkboxWithLabel(s, :cB10)%>
+          <%=checkboxWithLabel(s, :cB11)%>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" id="d-questions">
+      <div class="col-sm-8 col-sm-offset-2">
+        <h3><%=$questions[:dq]%></h3>
+        <br />
+          <div class="col-sm-8 col-sm-offset-2 checkbox-inline">
+            <%=checkboxWithLabel(s, :d0)%>
+            <%=checkboxWithLabel(s, :d1)%>
+            <div id="d1-questions" class="col-sm-10 col-sm-offset-1">
+              <%=checkboxWithLabel(s, :d1a)%>
+              <%=checkboxWithLabel(s, :d1b)%>
+              <%=checkboxWithLabel(s, :d1c)%>
+              <%=checkboxWithLabel(s, :d1d)%>
+              <%=checkboxWithLabel(s, :d1e)%>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
+
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <button type="button", class="btn btn-primary" id="previous-button">Previous</button> 
+        <button type="button", class="btn btn-primary span7 text-center" id="next-button">Next</button>
+        <button type="button", class="btn btn-primary span7 text-center" id="finish-button">Finish</button>
+        <%= f.submit "Submit", class: "btn btn-primary center", id: "submit-button" %>
+      </div>
+    </div>
+  <%end%>
+
+
+  <% content_for :javascript do %>
+    <%= javascript_include_tag 'survey_script' %>
+  <% end %>
+</div>
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Traverse Services</title>
+  <%= favicon_link_tag 'favicon.ico' %>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= yield :javascript_includes %>
+  <%= csrf_meta_tags %>
+  <%= yield :javascript %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+</head>
+<body>
+<div class="purchase">
+  <div class="container no-gutter">
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-3" id="img-div" style="text-align: center;">
+              <img id="main-img" src="assets/logo.png" width="400">
+        </div>
+      </div>
+  <br /><br /><br /> 
+      <div id="contact-info">
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2 center">
+            <p>email: <a href="mailto:info@traverseservices.com" class="">info@traverseservices.com</a></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2 center">
+            <p>phone: (312) 487-1835</p>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+          <div class="col-sm-10 col-sm-offset-1">
+              <span><div style="font-size: 50px; text-align: center; color: #1176BD; line-height: 1em"><p>Coming Soon.</p></div></span>
+              <div class="row">
+                  <div class="col-sm-10 col-sm-offset-1" style="font-size: 16px; text-align: justify;">
+                  </div>
+              </div>
+          </div>            
+      </div>
+  </div>
+</div>
+
+<div class="clock"></div>
+
+<%= yield %>
+</body>
+
+  <%= javascript_tag do %>
+    /*$(document).ready(function() {
+      //alert("test")
+      //img = $('#main-img')
+      //if(window.innerWidth < 450) {
+       // img.attr('width', window.innerWidth-50)
+      //}
+   /* }
+<% end %>
+</html>

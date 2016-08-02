@@ -1,0 +1,22 @@
+<h1>View</h1>
+
+<h3>Total: <%=SurveyContact.all.size%></h3>
+
+<br />
+
+<% $questions.each do |key, value| %>
+  <%if SoftSellSurvey.column_names.include? key.to_s%>
+    <p><%=value%> : 
+    <%=SoftSellSurvey.where(key => true).size()%></p>
+  <%else%>
+    <h3><%=value%></h3>
+  <%end%>
+  <br />
+<%end%>
+<%= link_to 'Download Contact Info Spreadsheet', contact_download_path(format: :csv) %>
+<br />
+<%= link_to 'Download Complete Spreadsheet', survey_download_path(format: :csv) %>
+
+
+
+<%= button_to "New", root_path, :method => "get" %>

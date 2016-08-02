@@ -1,0 +1,5 @@
+<%- headers = ['name', 'email', 'company'] -%>
+<%= CSV.generate_line headers, :row_sep => ?\t, :quote_char => ?\ %>
+<%- @users.each do |user| -%>
+  <%= CSV.generate_line([user.name, user.email, user.company], :row_sep => ?\t, :quote_char => ?\ ).html_safe %>
+<%- end -%>

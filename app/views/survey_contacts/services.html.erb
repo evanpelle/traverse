@@ -1,0 +1,86 @@
+<% content_for :javascript_includes do %>
+<%= javascript_include_tag "final_script.js" %>
+<% end %>
+
+<div class="container" id="finish-page">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3 center">
+      <br />
+      <br />
+      <h4 class="thank-you" id="thank-complete" style="font-weight:300; font-size:1.3em;">
+        Thanks for your submission. We recommend the following services based on your feedback.
+      </h4>
+      <h4 class="thank-you" id="thank-not-complete">
+        Thanks for your submission.
+      </h4>
+      <br />
+      <br />
+      <br />
+    </div>
+    <div class="col-sm-4 col-sm-offset-4 center" id="our-services">
+
+      <h1>Our Services</h1>
+      <br />
+    </div>
+  </div>
+<br />
+<br />
+  <div class="row" id="consulting">
+    <div class="col-md-10 col-md-offset-1">
+       <%= flash[:notice] %>
+      <div id="consulting" class="headline"><h2>Consulting</h2></div>
+      <div class="row" style="margin-bottom: 15px;">
+        <div class="col-md-10 col-md-offset-1" style="text-align: center;">
+          <iframe class="video" src="https://fast.wistia.net/embed/iframe/6wtnx00at5?playerPreference=flash" width="640" height="360" id="WistiaPlayer" border="0" style="border:none;"></iframe>
+        </div>
+      </div>
+      <p>Traverse Consulting Service is a flexible organization built to understand clients' needs and reverse engineer custom solutions. Our experience in transforming elite organizations' technical hiring practices gives us a unique perspective into how to evaluate complex problems, mitigate potential risks, and create effective and scalable solutions. By leveraging a transparent deliverable methodology, our clients understand the cost, quality, time, and volume benefits to expected.</p>
+      <br/>
+      <p>Whether you need help modifying a small aspect of your recruiting process, or you need to build a global hiring platform from the ground-up: Traverse Consulting Services has the proven expertise to get the job done.
+      </p>
+      <br /> <br />
+    </div>
+  </div>
+
+
+  <div class="row" id='requiting-process'>
+    <div class="col-md-10 col-md-offset-1">
+      <div id="recruiting" class="headline"><h2>Recruiting Process Outsourced</h2></div>
+        <div class="row" style="margin-bottom: 15px;">
+          <div class="col-md-10 col-md-offset-1" style="text-align: center;">
+            <iframe class="video" src="https://fast.wistia.net/embed/iframe/ll8kncaagt?playerPreference=flash" width="640" height="360" id="WistiaPlayer" border="0" style="border:none;"></iframe>
+          </div>
+        </div>
+        <p>Traverse Services Recruiting Process Outsourcing (RPO) is a collaborative partnership between Traverse Services and our clients. This offering is one where Traverse recruiters work onsite for customers to recruit and attract top technical talent. By working face to face with our clients' hiring team, it allows for unparalleled collaboration and creates transparency between all parties, thus allowing placement deliverables to be met in the most efficient manner.</p>
+        <br /> <br />
+    </div>
+  </div>
+
+  <div class="row" id="retained-search">
+    <div class="col-md-10 col-md-offset-1">
+      <div id="search" class="headline"><h2>Retained Search</h2></div>
+      <div class="row" style="margin-bottom: 15px;">
+        <div class="col-md-10 col-md-offset-1" style="text-align: center;">
+          <iframe class="video" src="https://fast.wistia.net/embed/iframe/bjwg82y82i?playerPreference=flash" width="640" height="360" id="WistiaPlayer" border="0" style="border:none;"></iframe>
+        </div>
+      </div>
+      <p>Traverse Retained Search is an outsourced offering in which Traverse Services manage the recruitment lifecycle of hiring technical experts for clients. We do this by creating transparent recruiting process managed by industry experts with a wide breadth of technical recruiting knowledge and world class networks of engineers.  Each Traverse Services recruiter follows the best practices crafted by our leadership team during their 30+ years of elite corporate recruiting experience.</p>
+      <br /> <br />
+    </div>
+  </div>
+
+
+
+  <div class="row" id="executive-search">
+    <div class="col-md-10 col-md-offset-1">
+    <div id="executive-search"class="headline"><h2>Executive Search</h2></div>
+      <div class="row" style="margin-bottom: 15px;">
+        <div class="col-md-10 col-md-offset-1" style="text-align: center;">
+          <iframe class="video" src="https://fast.wistia.net/embed/iframe/2tjekonwj6?playerPreference=flash" width="640" height="360" id="WistiaPlayer" border="0" style="border:none;"></iframe>
+        </div>
+      </div>
+      <p>Traverse Executive Search is an elite offering in which we manage strategic leadership hiring for clients. By creating a line of sight into our recruitment strategy, Traverse Services allows executive leadership to have the ability to control the direction and velocity of candidate engagement and onboarding. Traverse Executive Search provides a world class experience by fusing existing leadership relationships with clients' executive vision.</p>
+    </div>
+  </div>
+
+</div><!--/finish-page-->

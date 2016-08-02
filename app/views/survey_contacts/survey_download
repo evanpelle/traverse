@@ -1,0 +1,17 @@
+<%- headers = ["name", "email", "company"] -%>
+<%-$questions.each do |key, value| -%>
+  <%if SoftSellSurvey.column_names.include? key.to_s%>
+    <%headers.append(value)%>
+  <%end%>
+<%end%>
+<%= CSV.generate_line(headers).strip.html_safe %>
+<%- @surveys.each do |survey| -%>
+  <%attrs = [survey.survey_contact.name, survey.survey_contact.email, survey.survey_contact.company]%>
+  <%-$questions.each do |key, value| -%>
+    <%if SoftSellSurvey.column_names.include? key.to_s%>
+      <%attrs.append(survey[key])%>
+    <%end%>
+  <%end%>
+
+  <%= CSV.generate_line(attrs, :row_sep => ?\t , :quote_char => ?\ ).html_safe.strip %>
+<%- end -%>
